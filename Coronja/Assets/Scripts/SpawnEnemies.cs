@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
 public class SpawnEnemies : MonoBehaviour
 {
     public GameObject Enemy;
@@ -73,6 +71,10 @@ public class SpawnEnemies : MonoBehaviour
                 break;
             case 12:
                 Instantiate(Enemy, Spawnpoints[11].position, Quaternion.identity);
+                break;
+
+            default:
+                print("Het");
                 break;
         }
     }
