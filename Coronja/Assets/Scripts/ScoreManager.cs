@@ -9,11 +9,11 @@ public class ScoreManager : MonoBehaviour
 {
     public static int score;
 
-    private TextMeshPro TmproText;
+    public TextMeshProUGUI TmproText;
     
     void Awake()
     {
-        TmproText = GetComponent<TextMeshPro>();
+        TmproText = GetComponent<TextMeshProUGUI>();
         score = 0;
     }
     void update ()
