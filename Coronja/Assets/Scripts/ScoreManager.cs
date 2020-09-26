@@ -10,6 +10,7 @@ public class ScoreManager : MonoBehaviour
     public static int score;
 
     public TextMeshProUGUI TmproText;
+    public TextMeshProUGUI TmproTextTwo;
 
 
 
@@ -21,8 +22,10 @@ public class ScoreManager : MonoBehaviour
     public void Update()
     {
         TmproText.text = "Score: " + score;
+        TmproTextTwo.text = "Total Score: " + score;
     }
 
+   
 
 
 }

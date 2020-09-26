@@ -10,6 +10,8 @@ public class PlayerHealth : MonoBehaviour
     public int playerhealth;
     public int maxhealth;
 
+    public GameObject gameOverScreen;
+
     public TextMeshProUGUI TmproText;
     void Start()
     {
@@ -22,14 +24,17 @@ public class PlayerHealth : MonoBehaviour
 
         if (playerhealth <= 0)
         {
-            SceneManager.LoadScene(1);
+            gameOverScreen.SetActive(true);
         }
+            
+
         if (playerhealth > maxhealth)
         {
             playerhealth = maxhealth;
         }
 
         TmproText.text = "Health: " + playerhealth;
+        
     }
 
 
