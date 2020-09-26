@@ -10,18 +10,16 @@ public class ScoreManager : MonoBehaviour
     public static int score;
 
     public TextMeshProUGUI TmproText;
-    
-    public void start()
-    {
-        TmproText = GetComponent<TextMeshProUGUI>();
-        score = 0;
 
-        Debug.Log(score);
+
+    private void Start()
+    {
+        score = 0;
     }
-    public void update ()
+
+    public void Update()
     {
         TmproText.text = "Score: " + score;
-       
     }
 
 
