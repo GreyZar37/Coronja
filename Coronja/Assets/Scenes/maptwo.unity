@@ -21165,7 +21165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98d7a82fce231d44182b7be8cacee338, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShootRate: 0.01
+  ShootRate: 0.3
   Bullet: {fileID: 7659002193346197982, guid: d146b0eacb9e64e4e9ebc371fd9fd6fc, type: 3}
   DirectionNum: 0
 --- !u!1 &2103154843
