@@ -7,6 +7,8 @@ public class BulletScript : MonoBehaviour
     private Gun gun;
     private int Direction;
 
+    private float DeSpawn = 10f;
+
     public float BulletSpeed;
     [Range(0, 1)] [SerializeField] private float MovementSmoothing;
     Vector3 Velocity = Vector3.zero;
@@ -53,6 +55,13 @@ public class BulletScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        DeSpawn -= Time.fixedDeltaTime;
+
+        if(DeSpawn < 0)
+        {
+            Destroy(this.gameObject);
+        }
+
         switch (Direction)
         {
             case 1:

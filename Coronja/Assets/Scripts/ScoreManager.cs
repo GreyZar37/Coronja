@@ -11,7 +11,7 @@ public class ScoreManager : MonoBehaviour
 
     public TextMeshProUGUI TmproText;
     public TextMeshProUGUI TmproTextTwo;
-
+    
 
 
     private void Start()

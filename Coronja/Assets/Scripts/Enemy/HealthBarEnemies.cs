@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealthBar : MonoBehaviour
+public class HealthBarEnemies : MonoBehaviour
 {
     public int health;
     public int maxhealth;
@@ -27,7 +27,15 @@ public class HealthBar : MonoBehaviour
         }
         
     }
-    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.collider.tag == "Bullet")
+        {
+            Destroy(collision.collider.gameObject);
+            health--;
+        }
+    }
+
 
 
 }

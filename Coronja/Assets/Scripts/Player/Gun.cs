@@ -46,7 +46,7 @@ public class Gun : MonoBehaviour
             if (!Input.GetKey(KeyCode.DownArrow) && !Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.RightArrow))
             {
                 DirectionNum = 1;
-                Instantiate(Bullet, this.transform.position, Quaternion.identity);
+              
             }
 
             if (Input.GetKey(KeyCode.UpArrow))
@@ -71,7 +71,7 @@ public class Gun : MonoBehaviour
             if (!Input.GetKey(KeyCode.DownArrow) && !Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.LeftArrow))
             {
                 DirectionNum = 2;
-                Instantiate(Bullet, this.transform.position, Quaternion.identity);
+            
             }
 
             if (Input.GetKey(KeyCode.UpArrow))

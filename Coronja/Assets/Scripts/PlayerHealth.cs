@@ -10,7 +10,7 @@ public class PlayerHealth : MonoBehaviour
     public int playerhealth;
     public int maxhealth;
 
-    public GameObject gameOverScreen;
+ //   public GameObject gameOverScreen;
 
     public TextMeshProUGUI TmproText;
     void Start()
@@ -24,7 +24,8 @@ public class PlayerHealth : MonoBehaviour
 
         if (playerhealth <= 0)
         {
-            gameOverScreen.SetActive(true);
+          //  gameOverScreen.SetActive(true);
+            this.gameObject.SetActive(false);
         }
             
 
@@ -37,6 +38,12 @@ public class PlayerHealth : MonoBehaviour
         
     }
 
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.collider.tag == "Enemy")
+        {
+            playerhealth--;
+        }
+    }
 
 }
