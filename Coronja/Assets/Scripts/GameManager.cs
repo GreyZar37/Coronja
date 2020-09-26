@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
     public GameObject[] Objects;
 
     public GameObject[] Enemies;
+
+    private GameObject[] Bullets;
+    public GameObject gameOverScreen;
     void Awake()
     {
         playerhp = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
@@ -18,8 +21,9 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         Enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        Bullets = GameObject.FindGameObjectsWithTag("Bullet");
 
-        if(playerhp.playerhealth <= 0)
+        if (playerhp.playerhealth <= 0)
         {
             for (int i = 0; i < Objects.Length; i++)
             {
@@ -29,6 +33,11 @@ public class GameManager : MonoBehaviour
             {
                 Destroy(Enemies[i]);
             }
+            for (int i = 0; i < Bullets.Length; i++)
+            {
+                Destroy(Bullets[i]);
+            }
+            gameOverScreen.SetActive(true);
         }
        
            

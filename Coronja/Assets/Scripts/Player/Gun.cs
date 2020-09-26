@@ -28,10 +28,7 @@ public class Gun : MonoBehaviour
                 Shoot();
             }
         }
-        else
-        {
-            ShootRate = 0;
-        }
+        
         
     }
     void Shoot()
