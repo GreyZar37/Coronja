@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class EnemyLook : MonoBehaviour
 {
     private GameObject Player;
@@ -31,9 +32,9 @@ public class EnemyLook : MonoBehaviour
 
         Vector2 direction = new Vector2(target.x - transform.position.x, target.y - transform.position.y);
 
-        transform.up = direction;
+        transform.up  = direction;
     }
-
+    
     void MoveToPlayer()
     {
        Vector3 Targetvelocity = transform.up * Speed * 10;
