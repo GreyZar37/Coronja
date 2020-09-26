@@ -30,27 +30,6 @@ public class PlayerMovement : MonoBehaviour
 
         rb2D.velocity = Vector3.SmoothDamp(rb2D.velocity, (Targetvelocity * 10) * Speed , ref Velocity, MovementSmoothing) * Time.fixedDeltaTime;
     }
-        /*
-        if (move > 0 && FacingRight)
-        {
-            Flip();
-        }
-        else if (move < 0 && !FacingRight)
-        {
-            Flip();
-        }
-
-    }
-    void Flip()
-    {
-        FacingRight = !FacingRight;
-
-        Vector3 TheScale = transform.localScale;
-
-        TheScale.x *= -1;
-
-        transform.localScale = TheScale;
-    }
-    */
+      
 }
 
