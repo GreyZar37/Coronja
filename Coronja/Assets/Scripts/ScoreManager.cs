@@ -9,16 +9,20 @@ public class ScoreManager : MonoBehaviour
 {
     public static int score;
 
-
-
-    private void Start()
+    public TextMeshProUGUI TmproText;
+    
+    public void Start()
     {
-        score = 2;
+        TmproText = GetComponent<TextMeshProUGUI>();
+        score = 0;
 
-        Debug.Log(score);
+       
     }
-
-
+    public void Update()
+    {
+        TmproText.text = "Score: " + score;
+       
+    }
 
 
 }
