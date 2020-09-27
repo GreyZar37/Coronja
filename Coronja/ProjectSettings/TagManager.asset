@@ -4,13 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Bullet
   - Enemy
-<<<<<<< HEAD
-  - Spawner
-  - GameManager
-=======
-
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -20,9 +15,9 @@ TagManager:
   - UI
   - 
   - 
-  - SpawnBox
-  - Enemy
-  - Bullet
+  - 
+  - 
+  - 
   - 
   - 
   - 
