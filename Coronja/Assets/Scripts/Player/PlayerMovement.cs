@@ -7,7 +7,8 @@ public class PlayerMovement : MonoBehaviour
 {
     //components
     private Rigidbody2D rb2D;
-   
+
+
     //variabler
     Vector3 Velocity = Vector3.zero;
     public float Speed;
@@ -16,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     void Awake()
     {
         rb2D = GetComponent<Rigidbody2D>();
+      
 
     }
     void FixedUpdate()
@@ -24,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
         float yAxis = Input.GetAxisRaw("Vertical");
 
         
-
+        
 
         Vector3 Targetvelocity = new Vector3 ( xAxis, yAxis, 0).normalized;
 

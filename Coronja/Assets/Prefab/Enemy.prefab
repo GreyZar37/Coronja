@@ -207,3 +207,5 @@ MonoBehaviour:
   health: 1
   maxhealth: 1
   scoreValue: 1
+  deathSound: {fileID: 6557402751978140878, guid: ca525d5247b206642988bcc8c067df9e,
+    type: 3}

@@ -6,8 +6,11 @@ TagManager:
   tags:
   - Bullet
   - Enemy
+<<<<<<< HEAD
   - Spawner
   - GameManager
+=======
+
   layers:
   - Default
   - TransparentFX
