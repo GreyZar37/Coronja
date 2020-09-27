@@ -9,7 +9,7 @@ public class HealthBarEnemies : MonoBehaviour
     public int maxhealth;
     public int scoreValue;
 
-    public GameObject deathSound;
+    
     void Start()
     {
         health = maxhealth;
