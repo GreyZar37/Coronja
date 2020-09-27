@@ -4,78 +4,51 @@ using UnityEngine;
 
 public class SpawnEnemies : MonoBehaviour
 {
-    public GameObject Enemy;
-   
+    public GameObject[] Enemy;
+    private GameManager Manager;
+
     public Transform[] Spawnpoints;
+    
+    
 
      public float SpawnRate;
-    private float ConstRate;
+     [HideInInspector] public float ConstRate;
 
      private  int SpawnNum;
-
+    [HideInInspector] public int MaxSpawn;
 
     private void Awake()
     {
+        Manager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         ConstRate = SpawnRate;
     }
     void FixedUpdate()
     {
-        SpawnRate -= Time.fixedDeltaTime;
+            if(Manager.Enemies.Length < Manager.SpawnLimit )
+            {
+                SpawnRate -= Time.fixedDeltaTime;
 
-        if(SpawnRate < 0)
-        {
-            SpawnRate = ConstRate;
-            Spawn();
-        }
+                if (SpawnRate < 0)
+                {
+                    SpawnRate = ConstRate;
+                    Spawn();
+                }
+            }
     }
 
     void Spawn()
     {
-       int SpawnPointNum = Random.Range(0, 13);
+       int SpawnPointNum = 0;
+       int NumperSpawn = Random.Range(1, MaxSpawn);
+        int WhatEnemy;
 
-
-        switch (SpawnPointNum)
+      while(NumperSpawn > 0)
         {
-            case 1:
-                Instantiate(Enemy, Spawnpoints[0].position, Quaternion.identity);
-                break;
-            case 2:
-                Instantiate(Enemy, Spawnpoints[1].position, Quaternion.identity);
-                break;
-            case 3:
-                Instantiate(Enemy, Spawnpoints[2].position, Quaternion.identity);
-                break;
-            case 4:
-                Instantiate(Enemy, Spawnpoints[3].position, Quaternion.identity);
-                break;
-            case 5:
-                Instantiate(Enemy, Spawnpoints[4].position, Quaternion.identity);
-                break;
-            case 6:
-                Instantiate(Enemy, Spawnpoints[5].position, Quaternion.identity);
-                break;
-            case 7:
-                Instantiate(Enemy, Spawnpoints[6].position, Quaternion.identity);
-                break;
-            case 8:
-                Instantiate(Enemy, Spawnpoints[7].position, Quaternion.identity);
-                break;
-            case 9:
-                Instantiate(Enemy, Spawnpoints[8].position, Quaternion.identity);
-                break;
-            case 10:
-                Instantiate(Enemy, Spawnpoints[9].position, Quaternion.identity);
-                break;
-            case 11:
-                Instantiate(Enemy, Spawnpoints[10].position, Quaternion.identity);
-                break;
-            case 12:
-                Instantiate(Enemy, Spawnpoints[11].position, Quaternion.identity);
-                break;
-
-            default:
-                print("Het");
-                break;
+            WhatEnemy = Random.Range(0, 2);
+            SpawnPointNum = Random.Range(0, 11);
+            Instantiate(Enemy[WhatEnemy], Spawnpoints[SpawnPointNum].position, Quaternion.identity);    
+            NumperSpawn--;
         }
+        
     }
 }
