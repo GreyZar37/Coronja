@@ -9,7 +9,7 @@ public class HealthBarEnemies : MonoBehaviour
     public int maxhealth;
     public int scoreValue;
 
-    public GameObject deathSound;
+    
     void Start()
     {
         health = maxhealth;
@@ -20,6 +20,7 @@ public class HealthBarEnemies : MonoBehaviour
         
         if(health <= 0)
         {
+            GameObject.Find("AudioPlayer").GetComponent<AudioSource>().Play();
             
             Destroy(gameObject);
             ScoreManager.score += scoreValue;        
