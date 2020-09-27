@@ -9,10 +9,13 @@ public class Gun : MonoBehaviour
 
     public GameObject Bullet;
 
+    AudioSource shootSound;
+
     [HideInInspector] public int DirectionNum;
     void Awake()
     {
         ConstRate = ShootRate;
+        shootSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -92,5 +95,8 @@ public class Gun : MonoBehaviour
             DirectionNum = 4;
             Instantiate(Bullet, this.transform.position, Quaternion.identity);
         }
+
+        shootSound.Play(0);
+        
     }
 }
