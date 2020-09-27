@@ -28,7 +28,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (playerhealth <= 0)
         {
-          //  gameOverScreen.SetActive(true);
+          
             this.gameObject.SetActive(false);
         }
             

@@ -478,7 +478,7 @@ MonoBehaviour:
   - {fileID: 839341400}
   - {fileID: 932445638}
   Enemies: []
-  ChangeRate: 15
+  ChangeRate: 8.5
   IsDead: 0
   SpawnLimit: 5
   gameOverScreen: {fileID: 540573657}

@@ -276,7 +276,7 @@ MonoBehaviour:
   m_text: "Du en dude der har fundet vaccinen p\xE5 \"Coronja\", og du er s\xE5 taget
     ud og pr\xF8vet at kurrere s\xE5 mange som muligt.\n\n\nDet her spil er lidt
     scuffed, but we damn proud of it\n\nVisuals : Nicolai og Oleg\n\nProgramming:
-    Kasper og Oleg\n\npress \"SPACE\" to start"
+    Kasper og Oleg\n\nSound : Ikke n\xF8dvendigt oleg\n\npress \"SPACE\" to start"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c6e944fd83385d849b60f16a6dc5661d, type: 2}
   m_sharedMaterial: {fileID: -5983586712023839376, guid: c6e944fd83385d849b60f16a6dc5661d,
@@ -304,10 +304,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 75
+  m_fontSize: 64.4
   m_fontSizeBase: 75
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -340,7 +340,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 137.44775, y: 62.090637, z: 115.27881, w: 48.431824}
+  m_margin: {x: 137.44775, y: 62.090637, z: 115.27881, w: 87.17731}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
