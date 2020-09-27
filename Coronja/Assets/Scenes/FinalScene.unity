@@ -441,11 +441,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 160958307}
-  - component: {fileID: 160958306}
   - component: {fileID: 160958305}
+  - component: {fileID: 160958306}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GameManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -474,8 +474,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f626c4665d8d24bb47ee1e17d06ef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Objects: []
+  Objects:
+  - {fileID: 839341400}
+  - {fileID: 932445638}
   Enemies: []
+  ChangeRate: 15
+  IsDead: 0
+  SpawnLimit: 5
   gameOverScreen: {fileID: 540573657}
 --- !u!4 &160958307
 Transform:
@@ -1807,7 +1812,7 @@ GameObject:
   - component: {fileID: 839341401}
   m_Layer: 0
   m_Name: Spawner
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1824,7 +1829,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 404cb07c438a93b4ea272ffc83815f66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy: {fileID: 8269504243342366517, guid: ca106c1cb59e48c4c8028cc033a11106, type: 3}
+  Enemy:
+  - {fileID: 6159872444949528334, guid: ca106c1cb59e48c4c8028cc033a11106, type: 3}
+  - {fileID: 7678480332449021147, guid: 80f373683e9a0304f85cc12b006d936c, type: 3}
+  - {fileID: 6491956671425982238, guid: b5ee56653af131040af5e2307399e0e0, type: 3}
   Spawnpoints:
   - {fileID: 806078713}
   - {fileID: 1247104032}
@@ -1838,7 +1846,9 @@ MonoBehaviour:
   - {fileID: 1693099196}
   - {fileID: 1136413562}
   - {fileID: 1345297068}
-  SpawnRate: 0.5
+  SpawnRate: 3
+  ConstRate: 0
+  MaxSpawn: 0
 --- !u!4 &839341402
 Transform:
   m_ObjectHideFlags: 0
@@ -1937,12 +1947,12 @@ PrefabInstance:
     - target: {fileID: 5993783386610944699, guid: cd504e94beeeb1c40b1cf6dac048da61,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.4949646
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5993783386610944699, guid: cd504e94beeeb1c40b1cf6dac048da61,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.03139019
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5993783386610944699, guid: cd504e94beeeb1c40b1cf6dac048da61,
         type: 3}

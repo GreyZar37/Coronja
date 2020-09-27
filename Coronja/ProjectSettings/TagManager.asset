@@ -6,7 +6,11 @@ TagManager:
   tags:
   - Bullet
   - Enemy
-  - DeathSound
+<<<<<<< HEAD
+  - Spawner
+  - GameManager
+=======
+
   layers:
   - Default
   - TransparentFX

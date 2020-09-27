@@ -10,13 +10,17 @@ public class PlayerHealth : MonoBehaviour
     public int playerhealth;
     public int maxhealth;
 
+    private GameManager manager;
  //   public GameObject gameOverScreen;
 
     public TextMeshProUGUI TmproText;
     void Start()
     {
         playerhealth = maxhealth;
+
+        manager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
     }
+    
 
 
     public void Update()
@@ -43,6 +47,8 @@ public class PlayerHealth : MonoBehaviour
         if(collision.collider.tag == "Enemy")
         {
             playerhealth--;
+            manager.IsDead = true;
+            this.gameObject.SetActive(false);
         }
     }
 
