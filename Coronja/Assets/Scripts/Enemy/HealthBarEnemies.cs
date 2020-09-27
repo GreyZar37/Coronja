@@ -20,6 +20,7 @@ public class HealthBarEnemies : MonoBehaviour
         
         if(health <= 0)
         {
+            GameObject.Find("AudioPlayer").GetComponent<AudioSource>().Play();
             
             Destroy(gameObject);
             ScoreManager.score += scoreValue;        
