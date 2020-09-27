@@ -1,23 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.GameCenter;
 
 public class HealthBarEnemies : MonoBehaviour
 {
     public int health;
     public int maxhealth;
     public int scoreValue;
+
+    public GameObject deathSound;
     void Start()
     {
         health = maxhealth;
     }
 
- 
     void Update()
     {
         
         if(health <= 0)
         {
+            
             Destroy(gameObject);
             ScoreManager.score += scoreValue;        
         }

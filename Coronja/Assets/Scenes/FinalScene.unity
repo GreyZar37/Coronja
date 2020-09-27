@@ -579,7 +579,7 @@ Transform:
   - {fileID: 837516535}
   - {fileID: 118730366}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &231175960
 GameObject:
@@ -706,7 +706,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &245447364
 GameObject:
@@ -1026,7 +1026,7 @@ PrefabInstance:
     - target: {fileID: 2604354771725189111, guid: 62f315f91ca87564b8c1b764b68434e9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2604354771725189111, guid: 62f315f91ca87564b8c1b764b68434e9,
         type: 3}
@@ -1324,7 +1324,6 @@ GameObject:
   m_Component:
   - component: {fileID: 615219901}
   - component: {fileID: 615219902}
-  - component: {fileID: 615219904}
   - component: {fileID: 615219903}
   m_Layer: 8
   m_Name: BoxOne
@@ -1386,18 +1385,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d014931810bca594fb7d57225d978f21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &615219904
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 615219900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fe0caa5f9e60744bb49246daa850a15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &681384562
@@ -1737,7 +1724,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &846346118
 PrefabInstance:
@@ -1858,7 +1845,7 @@ PrefabInstance:
     - target: {fileID: 5993783386610944699, guid: cd504e94beeeb1c40b1cf6dac048da61,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5993783386610944699, guid: cd504e94beeeb1c40b1cf6dac048da61,
         type: 3}
@@ -1929,7 +1916,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c572da0125ff53045961425bed960396, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -17086,7 +17073,7 @@ PrefabInstance:
     - target: {fileID: 2604354771725189111, guid: 62f315f91ca87564b8c1b764b68434e9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2604354771725189111, guid: 62f315f91ca87564b8c1b764b68434e9,
         type: 3}
