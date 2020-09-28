@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public bool IsDead;
     [HideInInspector] public int SpawnLimit = 10;
 
+    public bool noSpawn = false;
+
+
     private GameObject player;
     private GameObject[] Bullets;
     public GameObject gameOverScreen;
@@ -43,7 +46,7 @@ public class GameManager : MonoBehaviour
             GotHit();
         }
 
-        if(ChangeRate < 0)
+        if(ChangeRate < 0 && noSpawn == false)
         {
             ChangeRate = constChangeRate;
 
@@ -52,6 +55,13 @@ public class GameManager : MonoBehaviour
             {
                 SpawnLimit += 5;
                 EnemySpawn.MaxSpawn++;
+
+                if (SpawnLimit == 30)
+                {
+                    noSpawn = true;
+                }
+                Debug.Log(EnemySpawn.MaxSpawn);
+                Debug.Log(SpawnLimit);
             }
             EnemySpawn.SpawnRate -= 0.25f;
             EnemySpawn.ConstRate -= 0.25f;
